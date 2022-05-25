@@ -12,10 +12,10 @@ conn_inst = None
 
 class SimpleConnectionBO():
     def __init__(self):
-        self._host = os.environ['PG_HOST']
-        self._user = os.environ['PG_USER']
-        self._token = "core-production-backend-aurora-cluster.cluster-ro-c9us761nawfe.us-east-1.rds.amazonaws.com:5432/?Action=connect&DBUser=iam_ro&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAUXPIFN5HI6QS46AG%2F20220404%2Fus-east-1%2Frds-db%2Faws4_request&X-Amz-Date=20220404T082851Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCYkt82EXIrMbtfVqHI8S8d6DGuI3eOoqevgsyxVBjnhAIgUkbJf1kZp3cqA2Fgi9B964dQw%2BIwQiQK5Y13Q1kbQu4q7wEIcRACGgwzMjUyOTM3OTcxOTgiDNbzu%2BKxc%2Bi720YZmyrMAR0Ey1vr%2FU4%2FXN2Aw27mb3Cco7RrK4RAhWPFN%2F7b%2BeAMd7A0aPaixBmQGN1cxozYA376L7dOPaBqCX8YfKjTGtI2H9YxXPsSGMXulveTlOgnD%2BXuJja2NC3lVvYSj%2BehADEy2OFMMJK53bh0i4eBXYZb5Jt5AsggoQSMd6dctTMfJtnL2MNdxdY1X6BrYgTgHbBp0DfvcvrNtR8XOw5lPZNdMA1mVatP7WHEqw5XpRH0luxZUltlDdiyGZvaCPUBhn4ikrK24C5C4m7kRjCax6qSBjqYAXFzfciHKO215zWUv6l1v0RFioQ%2BaX8ze8imsRBUWtRPhKe9xgycifhO8dxaaREnzBtsgd2t2BNSIs9ypCMvVwzCKHiQLRpTDoe6xaIQRRxVicPIlApNBFvhxV7e4Pe5nIp%2Fz%2B%2Fh7C9%2Brb3RMPRsyjUNRx6xDkjdUsQ524%2F7KkPKsDn1JajGxAnNirgpvBMw2%2FIDdAWEjPwU&X-Amz-Signature=7c1d6128e9eb3cb4ead57330e7c19c3b586819afcc420b541c9fb862ca99a81b"
-        self._db = os.environ['PG_DB']
+        self._host = os.environ['PG_HOST_l']
+        self._user = os.environ['PG_USER_l']
+        self._token = "core-production-backend-aurora-cluster.cluster-ro-c9us761nawfe.us-east-1.rds.amazonaws.com:5432/?Action=connect&DBUser=iam_ro&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAUXPIFN5HKXXDCQOF%2F20220523%2Fus-east-1%2Frds-db%2Faws4_request&X-Amz-Date=20220523T075538Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHAaCXVzLWVhc3QtMSJHMEUCIDEdvoHYHyObgqeA139K88y4ljC9%2B3x2CskG8jXzFontAiEA89Fk53Srg7Byf5ImYwR1hNbqWWScypYAg09u21VkWGEq7wEIWRACGgwzMjUyOTM3OTcxOTgiDPrV9b8IdyqvI96mQCrMAUmP1wyz%2FwFDMTea2dmFfXgXYx%2FIZOF%2BLOdhkr493gecYUc3%2BCMhHCRI3ZxoPrOix3g3YN9GS%2ByxZCiWOILOy8O2VoOjNu%2FDomqQJH68Ovw62QGD2TIyOAHQPuWmlHwyTLRc3tOcS15K1AUQj3%2Be%2Fq0%2Fj%2BhAE9kW%2Fdam1xhoJ3smn7Y9luG4kPVxnd4MaYp89D0M7dlm%2FZqr2NwevDm967DF99e2tbyn55%2B8aUOvaRo%2Foc9EWNXmsfV9zUkxCzAxBfj9NQg5e%2B1QqAlsezDx%2B6yUBjqYAUlGjqViHA2EadlbTd6MATgSVPVLNismTKEEjS5XUyAsonLwbQLUL6kPsRn7QfXlKJX0UEU9EV2oIqIp5F9R%2BffemLWlOuO2n2dc01GB8s9jxG59oPRNSDwwb2PHOpf7wnLYjKMBHGgxnVMI%2BSQ%2FhAqorDL3z9fdu1sjLo0I5jVJ%2Fsu5lN2fye7kwq7tpbRYSWjL0zt1Mq63&X-Amz-Signature=fdbe8f7b46e9b4e1f84428a2896bb4cb496e844ccb84a52f18619b6a77bfa19d"
+        self._db = os.environ['PG_DB_l']
         print('NEW ---------')
 
     def _generate_db_token(self):
